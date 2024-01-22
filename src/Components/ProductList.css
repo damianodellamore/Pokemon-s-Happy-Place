@@ -1,0 +1,116 @@
+/* Stili per tutte le card */
+.product-card, .item-card {
+  border-radius: 15px !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; /* Nasconde tutto ciò che esce dai bordi arrotondati */
+}
+
+.product-card:hover, .item-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.product-card .card-img-top, .item-card .card-img-top {
+  height: 200px !important;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .card-img-top, .item-card:hover .card-img-top {
+  transform: scale(1.4); /* Effetto zoom leggero al passaggio del mouse */
+}
+
+.product-card .card-body, .item-card .card-body {
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Stili per le card dei Pokémon */
+.product-card {
+  background-color: rgba(128, 240, 234, 0.46) !important; /* Azzurrino */
+}
+
+/* Stili per le card degli oggetti (items) */
+.item-card { background-color: rgba(245, 245, 69, 0.64);
+  height: 440px !important; /* Riduzione del 55% della dimensione originale */
+  width: 440px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 50% !important; /* Bordo arrotondato al 50% per ottenere una forma circolare */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; /* Nasconde tutto ciò che esce dai bordi arrotondati */
+}
+
+/* Media Query per schermi con larghezza massima di 768px (ad esempio, per smartphone) */
+@media (max-width: 768px) {
+  .item-card {
+    height: auto !important; /* Rendi l'altezza automatica per adattarsi al contenuto */
+    width: 90% !important; /* Larghezza ridotta per adattarsi allo schermo */
+    margin: 20px auto !important; /* Margini per centrare la card e aggiungere spazio intorno */
+    border-radius: 15px !important; /* Rendi i bordi meno arrotondati per un aspetto migliore su schermi piccoli */
+    padding: 20px !important; /* Padding interno per non sovraccaricare il contenuto */
+
+    /* Regola l'immagine per adattarsi al nuovo layout */
+    .card-img-top {
+      height: 180px !important; /* Regola l'altezza dell'immagine */
+      width: 180px !important; /* Regola la larghezza dell'immagine */
+      margin-top: 0 !important; /* Rimuovi lo spostamento verso il basso */
+    }
+
+    .card-title {
+      font-size: 1.2rem !important; /* Riduci la dimensione del font per il titolo */
+    }
+
+    .list-group-item {
+      font-size: 0.8rem !important; /* Riduci la dimensione del font per gli elementi della lista */
+    }
+  }
+}
+.item-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.item-card .card-img-top {
+  height: 220px !important;
+  width: 220px !important;
+  object-fit: cover !important; /* Adatta l'immagine al cerchio */
+  transition: transform 0.3s ease;
+  margin-top: 50px !important; /* Sposta l'immagine più in basso */
+}
+
+.item-card:hover .card-img-top {
+  transform: scale(1.05); /* Effetto zoom leggero al passaggio del mouse */
+}
+
+/* Aumenta la dimensione del testo e dell'immagine all'interno delle card degli oggetti */
+.item-card .card-title {
+  font-size: 1.5rem !important;
+}
+
+.item-card .list-group-item {
+  font-size: 1rem !important;
+}
+
+/* Altri stili comuni */
+.list-group-item {
+  background-color: transparent !important;
+  border: none !important;
+  font-size: 0.9rem !important;
+}
+
+.btn-favorite {
+  transition: transform 0.2s ease !important;
+}
+
+.btn-favorite:hover {
+  transform: scale(1.1) !important; /* Leggero ingrandimento al passaggio del mouse */
+}
+
+/* Riduci il padding tra i testi all'interno delle card degli oggetti (items) */

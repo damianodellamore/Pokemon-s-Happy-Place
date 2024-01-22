@@ -1,0 +1,23 @@
+/* Comments.css */
+.card {
+    margin: 20px auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-title {
+    color: #007bff; /* Bootstrap primary color */
+  }
+  /* Comments.css */
+  .comment-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+height: 400px;
+width: 350px;
+  }
+  
+  .stars {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+  }

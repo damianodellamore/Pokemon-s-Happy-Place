@@ -1,0 +1,122 @@
+/* Stile Base per la Navbar */
+.navbar-custom {
+  background-color: rgba(255, 105, 180, 0.9);/* Sfondo rosa per la navbar */
+  transition: background-color 0.5s ease; /* Transizione fluida per il colore di sfondo */
+  position: sticky; /* Rende la navbar sticky */
+  top: 0; /* Assicura che rimanga in cima alla pagina */
+  z-index: 1020; /* Assicura che la navbar sia sopra altri contenuti */
+}
+
+.navbar-custom:hover {
+  background-color: rgba(255, 105, 180, 0.9);/* Cambia colore quando si passa il mouse */
+}
+
+/* Stile per Navbar quando si scorre la pagina */
+.navbar-custom.scrolled {
+  background-color: rgba(255, 105, 180, 0.9); /* Cambia colore di sfondo allo scroll */
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Stile per elementi aggiunti ai preferiti */
+.added-to-favorites {
+  position: sticky;
+  bottom: 20px;
+  right: 20px;
+  background-color: lightgreen;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  transform: scale(1);
+  opacity: 1;
+  z-index: 1000; /* Assicurati che sia visibile sopra gli altri elementi */
+}
+
+.added-to-favorites.show {
+  animation: popUp 1.5s ease forwards;
+}
+
+@keyframes popUp {
+  0% {
+      transform: scale(0);
+      opacity: 0;
+  }
+  50% {
+      transform: scale(1.8);
+      opacity: 1;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
+/* Stile per i bottoni con bordo chiaro */
+.button-outline-light {
+  border:none;
+  background-color: rgb(44, 243, 233);
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button-outline-light:hover {
+  border:none;
+  background-color: rgba(255, 105, 180, 0.9);
+  color: black;
+}
+
+/* Stili per i link nel navbar */
+.navbar-custom .navbar-nav .nav-link {
+  transition: font-size 0.3s ease;
+}
+
+.navbar-custom .navbar-nav .nav-link:hover {
+  font-size: 1.1rem;
+}
+
+/* Stili per l'offcanvas */
+.offcanvas { color:white;
+  background-color: fuchsia;
+}
+
+.offcanvas-header {
+  border-bottom: 1px solid white;
+}
+
+.offcanvas-body {
+  color: white;
+  font-size: 1.1rem;
+}
+
+/* Stili per gli elementi dei preferiti nell'offcanvas */
+.favorite-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.favorite-item:hover {
+  background-color: rgba(255, 182, 193, 0.2);
+}
+
+.favorite-item img {
+  width: 150px;
+  height: 150px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+/* Stile per il carrello nell'offcanvas */
+.offcanvas-cart {
+  background-color: #00bfff; /* Azzurro molto acceso */
+  color: white; /* Testo bianco per migliorare la leggibilità */
+}
+
+.offcanvas-cart .offcanvas-header {
+  border-bottom: 1px solid white;
+}
+
+.offcanvas-cart .offcanvas-body {
+  font-size: 1rem; /* Adatta la dimensione del testo secondo necessità */
+}

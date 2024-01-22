@@ -1,0 +1,81 @@
+/* Stili per il container principale */
+.preview-container {
+    margin-top: 4rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out !important; /* Aggiunto important */
+  }
+  
+  /* Animazione per il cambio di colore di sfondo */
+  .background-animation {
+    animation: changeBackground 10s infinite alternate !important; /* Aggiunto important */
+  }
+  
+  @keyframes changeBackground {
+    0% {
+      background-color: #ff80b0; /* Inizia con il colore rosa */
+    }
+    100% {
+      background-color: #81f0ea; /* Finisce con il colore azzurro */
+    }
+  }
+  
+  /* Restanti stili rimanenti per il contenuto */
+  .preview-title {
+    color: #ff80b0 !important; /* Colore del testo più acceso */
+    font-size: 3rem !important; /* Dimensione del testo maggiore */
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  /* Stili per tutte le card */
+  .product-card {
+    background-color: #f9f9f9 !important; /* Colore di sfondo per le card */
+    border-radius: 15px !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15) !important;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out !important; /* Aggiunto important */
+    cursor: pointer;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Altri stili rimanenti */
+  .product-image {
+    height: 150px !important; /* Altezza ridotta */
+    object-fit: cover;
+    border-top-left-radius: 15px !important;
+    border-top-right-radius: 15px !important;
+  }
+  
+  .favorite-button {
+    background-color: transparent !important; /* Sfondo trasparente */
+    color: #ff80b0 !important; /* Colore del testo più acceso */
+    border: none !important; /* Rimuove il bordo del pulsante */
+    font-size: 1.2rem !important; /* Dimensione del testo */
+    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+    transition: color 0.3s ease-in-out !important; /* Aggiunto important */
+  }
+  
+  /* Stili per l'h1 */
+  h1 {
+    font-size: 3rem !important; /* Dimensione maggiore */
+    color: transparent; /* Rende il testo trasparente */
+    background: linear-gradient(135deg, #ff80b0, #fff, #000); /* Gradienti rosa a bianco a nero come background */
+    background-clip: text; /* Permette al testo di essere colorato dallo sfondo */
+    -webkit-background-clip: text; /* Per supporto browser WebKit */
+    animation: textGradient 2s infinite linear; /* Aggiunge un'animazione al testo */
+}
+
+@keyframes textGradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 0%;
+    }
+}
